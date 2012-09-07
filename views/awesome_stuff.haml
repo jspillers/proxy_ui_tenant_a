@@ -1,2 +1,17 @@
 %p
   Really awesome stuff
+
+%a.btn{"data-toggle" => "modal", :href => "#myModal", :role => "button"} Launch demo modal
+
+#myModal.modal{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1", :style => 'display: none;'}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#myModalLabel Modal header
+  .modal-body
+    %p One fine body…
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
+    %button.btn.btn-primary Save changes
+
+:javascript
+  $('#myModal').modal({'show':false});
